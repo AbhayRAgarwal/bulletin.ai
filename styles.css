@@ -417,14 +417,71 @@ nav ul {
 
 @media (max-width: 576px) {
     .comparison-table {
-        overflow-x: auto;
-        display: block;
-        width: 100%;
-        -webkit-overflow-scrolling: touch;
+        margin: 0 auto;
+        box-shadow: var(--shadow);
+        border-radius: var(--border-radius);
     }
     
-    .comparison-header, .comparison-row {
-        min-width: 500px;
+    /* Stack the table vertically on mobile */
+    .comparison-header {
+        display: none; /* Hide the header row on mobile */
+    }
+    
+    .comparison-row {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 1rem;
+        background-color: white;
+    }
+    
+    .comparison-feature {
+        font-weight: 600;
+        padding: 0.75rem;
+        background-color: var(--bg-alt);
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+        justify-content: center;
+    }
+    
+    .comparison-cell {
+        display: flex;
+        padding: 0.5rem;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px;
+    }
+    
+    /* Add labels for each cell */
+    .comparison-cell:nth-child(2)::before {
+        content: "Bulletin.AI:";
+        font-weight: 500;
+        margin-right: 0.5rem;
+        color: var(--primary-color);
+    }
+    
+    .comparison-cell:nth-child(3)::before {
+        content: "Eventbrite:";
+        font-weight: 500;
+        margin-right: 0.5rem;
+    }
+    
+    .comparison-cell:nth-child(4)::before {
+        content: "CampusGroups:";
+        font-weight: 500;
+        margin-right: 0.5rem;
+    }
+    
+    .highlighted {
+        background: var(--gradient-bg);
+        color: white;
+        border-radius: 4px;
+        padding: 0.25rem 0.75rem;
+    }
+    
+    .highlighted::before {
+        color: white;
     }
 }
 
