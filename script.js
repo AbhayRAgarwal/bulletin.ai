@@ -168,48 +168,52 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('NOTE: This only exports submissions stored in the local browser. For all form submissions, please check your Netlify Forms dashboard.');
     };
 
-    // Animate feature cards on scroll
+    // Feature cards animation
     const featureCards = document.querySelectorAll('.feature-card');
     
-    if (featureCards.length > 0) {
-        // Helper function to check if element is in viewport
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
-        
-        // Add fade-in class when scrolled into view
-        function handleScroll() {
-            featureCards.forEach(card => {
-                if (isInViewport(card)) {
-                    card.classList.add('visible');
-                }
-            });
-        }
-        
-        // Initial check
-        handleScroll();
-        
-        // Listen for scroll
-        window.addEventListener('scroll', handleScroll);
-    }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    featureCards.forEach(card => {
+        observer.observe(card);
+    });
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a, .hero-cta-btn, .footer-nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
             
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const navMenu = document.querySelector('nav ul');
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        document.querySelector('.hamburger').classList.remove('active');
+                    }
+                }
+            }
         });
     });
-    
+
     // Admin link handler
     const adminLink = document.getElementById('admin-link');
     if (adminLink) {
