@@ -7,7 +7,41 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('header .container').appendChild(mobileToggle);
 
     mobileToggle.addEventListener('click', function() {
-        navItems.classList.toggle('show');
+        if (navItems.classList.contains('show')) {
+            // Close menu
+            navItems.classList.remove('show');
+            mobileToggle.innerHTML = '☰';
+            // Enable scrolling again
+            document.body.style.overflow = '';
+        } else {
+            // Open menu
+            navItems.classList.add('show');
+            mobileToggle.innerHTML = '✕';
+            // Disable scrolling when menu is open
+            document.body.style.overflow = 'hidden';
+        }
+    });
+    
+    // Close mobile menu when clicking a nav link
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function() {
+            if (navItems.classList.contains('show')) {
+                navItems.classList.remove('show');
+                mobileToggle.innerHTML = '☰';
+                document.body.style.overflow = '';
+            }
+        });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (navItems.classList.contains('show') && 
+            !e.target.closest('nav') && 
+            !e.target.closest('.mobile-toggle')) {
+            navItems.classList.remove('show');
+            mobileToggle.innerHTML = '☰';
+            document.body.style.overflow = '';
+        }
     });
 
     // Form submission
