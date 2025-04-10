@@ -10,6 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Hidden form for Netlify Form detection -->
+    <form name="bulletin-waitlist" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="firstName" />
+        <input type="text" name="lastName" />
+        <input type="email" name="email" />
+        <select name="role">
+            <option value="student">Student</option>
+            <option value="organizer">Club Organizer</option>
+            <option value="vendor">Vendor</option>
+        </select>
+        <input type="text" name="campus" />
+    </form>
+    
     <header>
         <div class="container">
             <div class="logo">
@@ -135,7 +148,7 @@
             <div class="waitlist-content">
                 <h2>Be the First to Know</h2>
                 <p>Join our waitlist to get early access to Bulletin.AI when we launch at your campus.</p>
-                <form id="waitlist-form" name="bulletin-waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <form id="waitlist-form" name="bulletin-waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html">
                     <input type="hidden" name="form-name" value="bulletin-waitlist">
                     <p class="hidden">
                         <label>Don't fill this out if you're human: <input name="bot-field" /></label>

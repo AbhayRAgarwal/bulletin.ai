@@ -486,4 +486,55 @@ footer .container {
 /* Form styles */
 .hidden {
     display: none;
+}
+
+/* Success Page */
+#success-page {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background: var(--bg-alt);
+}
+
+.success-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.success-image {
+    max-width: 250px;
+    height: auto;
+}
+
+.success-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: var(--gradient-bg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.success-content p {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .success-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .success-image {
+        max-width: 180px;
+    }
 } 

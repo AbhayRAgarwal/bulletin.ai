@@ -2,11 +2,10 @@
   # No build command needed for static HTML site
   publish = "."
 
-# Redirect for form submissions
-[[redirects]]
-  from = "/thank-you"
-  to = "/?success=true"
-  status = 302
+# Form handling
+[forms]
+  [forms.bulletin-waitlist]
+    success_url = "/success.html"
 
 # Set custom headers for security
 [[headers]]
