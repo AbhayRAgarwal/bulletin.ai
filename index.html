@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulletin.AI - Your Campus, All in One Place</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.svg" alt="Bulletin.AI Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#comparison">Why Us</a></li>
+                    <li><a href="#waitlist" class="btn-nav">Join the Waitlist</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Your Campus, All in One Place</h1>
+                <p>Discover, plan, and engage with everything happening at your university.</p>
+                <a href="#waitlist" class="btn-primary">Join the Waitlist</a>
+            </div>
+            <div class="hero-image">
+                <img src="hero-image.svg" alt="Bulletin.AI App Preview">
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2>Everything You Need to Stay Connected</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Comprehensive Event Aggregation</h3>
+                    <p>All campus events in one place, no matter who's hosting.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>RSVP & Google Calendar Sync</h3>
+                    <p>Seamlessly add events to your calendar with one tap.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Social Networking & Friends' Attendance</h3>
+                    <p>See which friends are going to each event.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Anonymous Event Messaging</h3>
+                    <p>Chat with other attendees before, during, and after events.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛠️</div>
+                    <h3>Tools for Clubs & Vendors</h3>
+                    <p>Powerful tools to manage and promote your events.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Smart Event Recommendations</h3>
+                    <p>Discover events tailored to your interests and schedule.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>Interactive Campus Map</h3>
+                    <p>Never get lost again with our detailed campus navigation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📓</div>
+                    <h3>Attendance Log & Event Posts</h3>
+                    <p>Keep track of events you've attended and share your experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="comparison">
+        <div class="container">
+            <h2>Why Bulletin.AI?</h2>
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div class="comparison-cell"></div>
+                    <div class="comparison-cell highlighted">Bulletin.AI</div>
+                    <div class="comparison-cell">Eventbrite</div>
+                    <div class="comparison-cell">CampusGroups</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">All Campus Events in One Place</div>
+                    <div class="comparison-cell highlighted">✓</div>
+                    <div class="comparison-cell">✗</div>
+                    <div class="comparison-cell">Partial</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">Student-Focused Design</div>
+                    <div class="comparison-cell highlighted">✓</div>
+                    <div class="comparison-cell">✗</div>
+                    <div class="comparison-cell">Partial</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">Personalized Recommendations</div>
+                    <div class="comparison-cell highlighted">✓</div>
+                    <div class="comparison-cell">Partial</div>
+                    <div class="comparison-cell">✗</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">Friend Activity</div>
+                    <div class="comparison-cell highlighted">✓</div>
+                    <div class="comparison-cell">✗</div>
+                    <div class="comparison-cell">✗</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-feature">Anonymous Messaging</div>
+                    <div class="comparison-cell highlighted">✓</div>
+                    <div class="comparison-cell">✗</div>
+                    <div class="comparison-cell">✗</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="waitlist">
+        <div class="container">
+            <div class="waitlist-content">
+                <h2>Be the First to Know</h2>
+                <p>Join our waitlist to get early access to Bulletin.AI when we launch at your campus.</p>
+                <form id="waitlist-form" name="bulletin-waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="bulletin-waitlist">
+                    <p class="hidden">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">University Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="role">I am a...</label>
+                            <select id="role" name="role" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="student">Student</option>
+                                <option value="organizer">Club Organizer</option>
+                                <option value="vendor">Vendor</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="campus">Campus Name (Optional)</label>
+                            <input type="text" id="campus" name="campus">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">Join Waitlist</button>
+                </form>
+            </div>
+            <div class="waitlist-image">
+                <img src="waitlist-image.svg" alt="Bulletin.AI on Mobile">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="logo-footer.svg" alt="Bulletin.AI Logo">
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="mailto:info@bulletin.ai">Contact Us</a>
+                <a href="#" id="admin-link" style="opacity: 0.1;">Admin</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2023 Bulletin.AI. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

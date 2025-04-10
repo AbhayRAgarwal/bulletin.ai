@@ -1,0 +1,63 @@
+<svg width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+    <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e5e7eb" />
+      <stop offset="100%" stop-color="#f9fafb" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Phone frame -->
+  <rect x="150" y="20" width="200" height="360" rx="20" fill="white" stroke="url(#phoneGradient)" stroke-width="10"/>
+  
+  <!-- Phone screen -->
+  <rect x="165" y="40" width="170" height="320" rx="5" fill="#f9fafb"/>
+  
+  <!-- Status bar -->
+  <rect x="165" y="40" width="170" height="20" rx="5" fill="#1f2937"/>
+  <circle cx="175" cy="50" r="3" fill="white"/>
+  <rect x="300" y="47" width="25" height="6" rx="3" fill="white"/>
+  
+  <!-- App header -->
+  <rect x="165" y="60" width="170" height="50" rx="5" fill="url(#phoneGradient)"/>
+  <rect x="185" y="77" width="60" height="8" rx="4" fill="white"/>
+  <rect x="185" y="90" width="40" height="5" rx="2.5" fill="white" fill-opacity="0.6"/>
+  <circle cx="315" cy="85" r="15" fill="white" fill-opacity="0.3"/>
+  <circle cx="315" cy="85" r="7" fill="white" fill-opacity="0.6"/>
+  
+  <!-- Campus Map -->
+  <rect x="175" y="120" width="150" height="150" rx="10" fill="url(#mapGradient)"/>
+  
+  <!-- Roads -->
+  <rect x="215" y="120" width="10" height="150" fill="#d1d5db"/>
+  <rect x="175" y="170" width="150" height="10" fill="#d1d5db"/>
+  <rect x="275" y="120" width="10" height="150" fill="#d1d5db"/>
+  
+  <!-- Buildings -->
+  <rect x="185" y="130" width="20" height="30" rx="2" fill="#6366f1" fill-opacity="0.7"/>
+  <rect x="235" y="130" width="30" height="20" rx="2" fill="#d946ef" fill-opacity="0.7"/>
+  <rect x="295" y="140" width="20" height="20" rx="2" fill="#6366f1" fill-opacity="0.7"/>
+  <rect x="185" y="190" width="20" height="40" rx="2" fill="#d946ef" fill-opacity="0.7"/>
+  <rect x="235" y="190" width="30" height="30" rx="2" fill="#6366f1" fill-opacity="0.7"/>
+  <rect x="285" y="200" width="30" height="25" rx="2" fill="#d946ef" fill-opacity="0.7"/>
+  
+  <!-- Highlighted Event Location -->
+  <circle cx="245" cy="205" r="15" fill="#d946ef" stroke="white" stroke-width="3"/>
+  <circle cx="245" cy="205" r="5" fill="white"/>
+  
+  <!-- Event Card -->
+  <rect x="175" y="280" width="150" height="70" rx="10" fill="white" stroke="url(#phoneGradient)" stroke-width="2"/>
+  <rect x="185" y="290" width="40" height="40" rx="5" fill="#6366f1"/>
+  <rect x="235" y="290" width="80" height="8" rx="4" fill="#1f2937"/>
+  <rect x="235" y="305" width="50" height="5" rx="2.5" fill="#4b5563"/>
+  <rect x="235" y="315" width="30" height="10" rx="5" fill="url(#phoneGradient)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="120" cy="150" r="30" fill="#6366f1" fill-opacity="0.1"/>
+  <circle cx="380" cy="100" r="50" fill="#d946ef" fill-opacity="0.1"/>
+  <circle cx="100" cy="300" r="40" fill="#818cf8" fill-opacity="0.1"/>
+  <circle cx="400" cy="250" r="25" fill="#e879f9" fill-opacity="0.1"/>
+</svg> 

@@ -1,0 +1,19 @@
+[build]
+  # No build command needed for static HTML site
+  publish = "."
+
+# Redirect for form submissions
+[[redirects]]
+  from = "/thank-you"
+  to = "/?success=true"
+  status = 302
+
+# Set custom headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline'" 
